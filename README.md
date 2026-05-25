@@ -31,13 +31,15 @@ WITH SalaireClasse AS (
 SELECT Departement, Prenom, Nom, Salaire, Rang
 FROM SalaireClasse
 WHERE Rang <= 3
-ORDER BY Departement ASC, Rang ASC;
+ORDER BY Departement ASC, Rang ASC; ```
 
+```
 ## resultat_requete_1.png
 
 ### 2. Analyse Temporelle et Croissance de la Masse Salariale
 Objectif : Mesurer l'évolution du salaire moyen global année après année et calculer son taux de croissance.
 
+```sql
 WITH EvolutionSalaires AS (
     SELECT YEAR(s.from_date) AS Annee, ROUND(AVG(s.salary), 2) AS Salaire_Moyen
     FROM salaries s
@@ -51,6 +53,9 @@ SELECT
 FROM EvolutionSalaires
 ORDER BY Annee ASC;
 
+```
 ## resultat_requete_2.png
 
-## Grâce à cette analyse SQL sur grand volume de données, la direction dispose d'une cartographie claire des coûts RH. Ce projet démontre ma capacité à manipuler des millions de lignes pour transformer de la donnée brute en indicateurs d'aide à la décision.
+## Conclusion
+
+Grâce à cette analyse SQL sur grand volume de données, la direction dispose d'une cartographie claire des coûts RH. Ce projet démontre ma capacité à manipuler des millions de lignes pour transformer de la donnée brute en indicateurs d'aide à la décision.
